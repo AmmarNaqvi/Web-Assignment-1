@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+.header {
+    color: #ffffff;
+    padding: 1px;
+}
+/*---------------------------------------
+----------------12 Columns---------------
+----------------------------------------- */
+* {
+    box-sizing: border-box;
+}
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 0px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/*---------------------------------------------------------
+-* Info
+-*-------------------------------------------------------*/
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ * (c) 2010-2013 Fontspring
+ * 
+ * The fonts included are copyrighted by the vendor listed below.
+ * Vendor:      Fontfabric
+ * License URL: http://www.fontspring.com/fflicense/fontfabric
+ */
+@font-face {
+    font-family: "ZagBoldRegular";
+    src: url("/assets/fonts/ZagBold/Zag_Bold-webfont.eot");
+    src: url("/assets/fonts/ZagBold/Zag_Bold-webfont.eot?#iefix") format("embedded-opentype"),
+         url("/assets/fonts/ZagBold/Zag_Bold-webfont.woff") format("woff"),
+         url("/assets/fonts/ZagBold/Zag_Bold-webfont.ttf") format("truetype"),
+         url("/assets/fonts/ZagBold/Zag_Bold-webfont.svg#ZagBoldRegular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+#info {
+    bottom: 0;
+    color: #000;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 16px;
+    height: 40%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+#info .post-title {
+    color: inherit;
+    font-family: "ZagBoldRegular", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 48px;
+    margin: 0;
+    padding: 30px 0 0;
+}
+
+
+/*---------------------------------------
+----------------Alphabet-----------------
+----------------------------------------- */
+span.step {
+  background: #00000f;
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: #ffffff;
+  display: inline-block;
+  color: white;
+  font-family: "ZagBoldRegular", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 1.6em;
+  margin-left: 250px;
+  margin-top: 50px;
+  text-align: center;
+  width: 1.6em; 
+  float: left;
+}
+
+
+/*---------------------------------------
+----------------Display------------------
+----------------------------------------- */
+.display {
+  display: none;
+  position: fixed;
+  
+  -webkit-column-count: 12; /* Chrome, Safari, Opera */
+  -moz-column-count: 12; /* Firefox */
+  column-count: 12;
+}
+
+.display:target {
+  display: table;
+  position: absolute;
+}
+
+/*---------------------------------------
+----------------Buttons------------------
+----------------------------------------- */
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 34px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+/*---------------------------------------
+----------------Links--------------------
+----------------------------------------- */
+
+a:link {
+	text-decoration: none;
+	bottom: 0;
+    color: #ffffff;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 46px;
+    height: 40%;
+    text-align: center;
+    width: 100%;
+}
+
+/* visited link */
+a:visited {
+  color: #ffffff;
+}
+
+/* mouse over link */
+a:hover {
+  color: #ffffff;
+}
+
+/* selected link */
+a:active {
+  color: #ffffff;
+}
+
+/*---------------------------------------
+----------------Apple--------------------
+----------------------------------------- */
+
+#apple {
+	position:relative;
+    background-image: url('http://images.clipartpanda.com/apple-computer-clipart-niBXkBEXT.jpeg');
+	left: -150px;
+	top: 100px;
+	width: 300px;
+	height: 260px;
+}
+
+/*---------------------------------------
+----------------Ball---------------------
+----------------------------------------- */
+
+#ball {
+	position:relative;
+	left: 230px;
+	top: 240px;
+    overflow: hidden;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 20px solid #FFF;
+    background-color: #D2E503;
+    box-sizing: border-box;
+    transform: translate(-50%, -50%) rotate(30deg);
+}
+
+#ball:before, #ball:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: solid 1em #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+      
+}
+#ball:before {
+    right: 70%;
+}
+
+#ball:after {
+    left: 70%;
+}
+
+/*---------------------------------------
+----------------Cat----------------------
+----------------------------------------- */
+
+#cat {
+	position:relative;
+    content: url('http://2.bp.blogspot.com/-n5Dq0Z6G37U/UlbwYXTM7_I/AAAAAAAAHIA/EiAbNgOiQMM/s1600/Grumpy%20Cat%20Pic.png');
+	left: -150px;
+	top: 100px;
+	width: 340px;
+	height: 300px;
+}
+
+/*---------------------------------------
+----------------Dog----------------------
+----------------------------------------- */
+#dog {
+	position:relative;
+    content: url('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQgPbLRDasm4uZWpJel8VBu9EdjcXkj7JGgzzdbYTmrdYt0dfK_EA');
+	left: -150px;
+	top: 100px;
+	width: 250px;
+	height: 260px;
+}
+
+
+
+/*---------------------------------------
+----------------Egg----------------------
+----------------------------------------- */
+#egg {
+	position:relative;
+	left: -100px;
+	top: 150px;
+    width: 136px;
+    height: 190px;
+    background: #fffaa0;
+    display: block;
+    -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+/*---------------------------------------
+-----------------Fish--------------------
+----------------------------------------- */
+#fish {
+	position:relative;
+    content: url('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRM8mlsFeCoRfMcSFYSBoFsPND6wgmsX-CuCAGCeNOicbUdy__W');
+	left: -150px;
+	top: 100px;
+	width: 350px;
+	height: 260px;
+}
+/*---------------------------------------
+-----------------Ghost-------------------
+----------------------------------------- */
+#ghost {
+	position:relative;
+    content: url('http://images.clipartpanda.com/ghost-clip-art-4T9E5jGrc.png');
+	left: -150px;
+	top: 100px;
+	width: 350px;
+	height: 260px;
+}
+
+
+/*---------------------------------------
+----------------Heart--------------------
+----------------------------------------- */
+#heart {
+    position: relative;
+	left: -120px;
+	top: 120px;
+    width: 300px;
+    height: 270px;
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 150px;
+    top: 0;
+    width: 150px;
+    height: 240px;
+    background: red;
+    -moz-border-radius: 150px 150px 0 0;
+    border-radius: 150px 150px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+/*---------------------------------------
+---------------Ice-Cream-----------------
+----------------------------------------- */
+#ice-cream {
+	position:relative;
+    content: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTZsMlQGRvyMif6Z4QSVDL2xB-Ap27anLcSKpbDLlvzp9LdOnwpbg');
+	left: -100px;
+	top: 100px;
+	width: 180px;
+	height: 280px;
+}
+
+/*---------------------------------------
+-----------------Jug---------------------
+----------------------------------------- */
+#jug {
+	position:relative;
+    content: url('http://www.clker.com/cliparts/1/7/d/b/11971047581741828637biswajyotim_Jug.svg.med.png');
+	left: -150px;
+	top: 100px;
+	width: 240px;
+	height: 280px;
+}
+/*---------------------------------------
+-----------------King--------------------
+----------------------------------------- */
+#king {
+	position:relative;
+    content: url('http://images.clipartpanda.com/king-clip-art-king_01_clip1.gif');
+	left: -120px;
+	top: 100px;
+	width: 240px;
+	height: 280px;
+}
+
+/*---------------------------------------
+----------------Lemon--------------------
+----------------------------------------- */
+#lemon {
+	position:relative;
+	left: -100px;
+	top: 100px;
+	width: 220px;
+	height: 220px;
+	background-color:#FFE135;
+	border-radius:50% 15%;
+	transform:rotate(45deg);
+	box-shadow:inset -.25em 0em #CCB42A;
+}
+
+
+/*---------------------------------------
+----------------Moon---------------------
+----------------------------------------- */
+
+#moon {
+	position:relative;
+	left: -150px;
+	top: 50px;
+	width: 260px;
+	height: 260px;
+	border-radius: 50%;
+	box-shadow: 35px 35px 0 0 yellow;
+}
+
+/*---------------------------------------
+----------------Noodles------------------
+----------------------------------------- */
+#noodles {
+	position:relative;
+    content: url('http://thumbs.dreamstime.com/x/steaming-noodles-bowl-loose-style-34839869.jpg');
+	left: -120px;
+	top: 100px;
+	width: 300px;
+	height: 250px;
+}
+/*---------------------------------------
+----------------Orange-------------------
+----------------------------------------- */
+#orange {
+	position:relative;
+	width:16em;
+	height:16em;
+	margin-top:9.5em;
+	margin-left:-5.5em;
+	background-color:orange;
+	border-radius:50%;
+	box-shadow:inset -.25em -.25em #CC8400;
+}
+#orange:before {
+	content:'';
+	position:absolute;
+	top:-3.5em;
+	left:7em;
+	height:0;
+	width:0;
+	border:5.5em solid transparent;
+	border-left:.5em solid brown;
+	border-top:0;
+	transform:rotate(20deg);
+	transform-origin:bottom left;
+}
+#orange:after {
+	content:'';
+	position:absolute;
+	top:-1.5em;
+	left:8.5em;
+	height:0;
+	width:0;
+	border:2.75em solid green;
+	border-bottom-color:darkgreen;
+	border-left-color:darkgreen;
+	border-radius:0 50%;
+}
+
+
+/*---------------------------------------
+----------------Pear---------------------
+----------------------------------------- */
+#pear {
+	position:relative;
+	width:13em;
+	height:13em;
+	margin-top:12em;
+	margin-left:-7.5em;
+	background-color:#D1E231;
+	border-radius:50% 15% 50% 50%;
+	transform:rotate(-45deg);
+	box-shadow:inset .15em -.25em #8A9A5B;
+}
+#pear:after {
+	content:'';
+	position:absolute;
+	top:-1.5em;
+	left:12.75em;
+	height:5.25em;
+	width:3em;
+	background-color:transparent;
+	border-radius:50% 0;
+	box-shadow:-.25em 0 0 brown;
+	transform:rotate(45deg);
+}
+/*---------------------------------------
+----------------Quail--------------------
+----------------------------------------- */
+#quail {
+	position:relative;
+    content: url('http://www.clker.com/cliparts/2/b/3/b/1320957900344425074Quail.svg.hi.png');
+	left: -150px;
+	top: 100px;
+	width: 300px;
+	height: 300px;
+}
+/*---------------------------------------
+----------------Rose---------------------
+----------------------------------------- */
+#rose {
+	position:relative;
+    content: url('http://images.clipartpanda.com/knockout-clipart-rose-pic-clip-art-3.jpg');
+	left: -150px;
+	top: 100px;
+	width: 230px;
+	height: 340px;
+}
+
+
+/*---------------------------------------
+----------------Star---------------------
+----------------------------------------- */
+#star-five {
+   margin: 150px -100px;
+   position: relative;
+   display: block;
+   color: yellow;
+   width: 0px;
+   height: 0px;
+   border-right:  100px solid transparent;
+   border-bottom: 70px  solid yellow;
+   border-left:   100px solid transparent;
+   -moz-transform:    rotate(35deg);
+   -webkit-transform: rotate(35deg);
+   -ms-transform:     rotate(35deg);
+   -o-transform:      rotate(35deg);
+}
+#star-five:before {
+   border-bottom: 80px solid yellow;
+   border-left: 30px solid transparent;
+   border-right: 30px solid transparent;
+   position: absolute;
+   height: 0;
+   width: 0;
+   top: -45px;
+   left: -65px;
+   display: block;
+   content: '';
+   -webkit-transform: rotate(-35deg);
+   -moz-transform:    rotate(-35deg);
+   -ms-transform:     rotate(-35deg);
+   -o-transform:      rotate(-35deg);
+
+}
+#star-five:after {
+   position: absolute;
+   display: block;
+   color: yellow;
+   top: 3px;
+   left: -105px;
+   width: 0px;
+   height: 0px;
+   border-right: 100px solid transparent;
+   border-bottom: 70px solid yellow;
+   border-left: 100px solid transparent;
+   -webkit-transform: rotate(-70deg);
+   -moz-transform:    rotate(-70deg);
+   -ms-transform:     rotate(-70deg);
+   -o-transform:      rotate(-70deg);
+   content: '';
+}
+/*---------------------------------------
+----------------Tiger--------------------
+----------------------------------------- */
+#tiger {
+	position:relative;
+    content: url('http://www.wildlife-animals.com/clipart/tiger-4.png');
+	left: -150px;
+	top: 100px;
+	width: 300px;
+	height: 300px;
+}
+
+/*---------------------------------------
+----------------Umbrella-----------------
+----------------------------------------- */
+#umbrella {
+	position:relative;
+    content: url('http://pngimg.com/upload/umbrella_PNG494.png');
+	left: -150px;
+	top: 150px;
+	width: 250px;
+	height: 250px;
+}
+
+/*---------------------------------------
+----------------Van----------------------
+----------------------------------------- */
+#van {
+	position:relative;
+    content: url('http://scoobyaddicts.com/Images/MysteryMachine1.jpg');
+	left: -150px;
+	top: 100px;
+	width: 350px;
+	height: 250px;
+}
+/*---------------------------------------
+----------------Whale--------------------
+----------------------------------------- */
+#whale {
+	position:relative;
+    content: url('http://images.clipartpanda.com/whale-clip-art-whale_a06.png');
+	left: -100px;
+	top: 100px;
+	width: 350px;
+	height: 250px;
+}
+/*---------------------------------------
+--------------Xylophone------------------
+----------------------------------------- */
+#xylophone {
+	position:relative;
+    content: url('http://images.clipartpanda.com/free-music-clipart-xylophone.gif');
+	left: -100px;
+	top: 100px;
+	width: 250px;
+	height: 250px;
+}
+/*---------------------------------------
+----------------Yoyo---------------------
+----------------------------------------- */
+#yoyo {
+	position:relative;
+    content: url('http://www.clipartlord.com/wp-content/uploads/2014/05/yo-yo2.png');
+	left: -100px;
+	top: 150px;
+	width: 200px;
+	height: 250px;
+}
+/*---------------------------------------
+----------------Zebra--------------------
+----------------------------------------- */
+#zebra {
+	position:relative;
+    content: url('http://images.clipartpanda.com/zebra-clipart-black-and-white-zebra_black_white_line_art_coloring_book_colouring-2555px.png');
+	left: -150px;
+	top: 120px;
+	width: 350px;
+	height: 250px;
+}
+
+/*---------------------------------------
+---------------Arrows--------------------
+----------------------------------------- */
+.arrow{
+  position: absolute;
+  top: 200px;
+  width: 0px;
+  height: 0px;
+  border: 50px solid transparent; 
+  border-top-color: #00004F; 
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+.arrow:before{
+  content:'';
+  width: 0px;
+  height: 0px;
+  border: 30px solid transparent; 
+  border-top-color: white;
+  display: inline-block;
+  -webkit-transform: translate(-30px, -50px);
+}
+.arrow:hover{
+  border-top-color: #00002F; 
+}
+.arrow.left{
+  transform: rotate(90deg) translate(0px, 25px);
+  -webkit-transform: rotate(90deg) translate(0px, 25px);
+  -moz-transform: rotate(90deg) translate(0px, 25px);
+  -o-transform: rotate(90deg) translate(0px, 25px);
+  -ms-transform: rotate(90deg) translate(0px, 25px);
+}
+.arrow.right{
+  left: 1250px;
+  transform: rotate(270deg) translate(0px, 25px);
+  -webkit-transform: rotate(270deg) translate(0px, 25px);
+  -moz-transform: rotate(270deg) translate(0px, 25px);
+  -o-transform: rotate(270deg) translate(0px, 25px);
+  -ms-transform: rotate(270deg) translate(0px, 25px);
+}
+</style>
+</head>
+<body>
+<a href="Quiz.html"><button class="btn" style="position:absolute;top:550px;left:1150px;">Take Quiz</button></a>
+</div>
+<div id="alphabet">
+<a href="#id01"><button class="btn">A</button></a>
+<a href="#id02"><button class="btn">B</button></a>
+<a href="#id03"><button class="btn">C</button></a>
+<a href="#id04"><button class="btn">D</button></a>
+<a href="#id05"><button class="btn">E</button></a>
+<a href="#id06"><button class="btn">F</button></a>
+<a href="#id07"><button class="btn">G</button></a>
+<a href="#id08"><button class="btn">H</button></a>
+<a href="#id09"><button class="btn">I</button></a>
+<a href="#id10"><button class="btn">J</button></a>
+<a href="#id11"><button class="btn">K</button></a>
+<a href="#id12"><button class="btn">L</button></a>
+<a href="#id13"><button class="btn">M</button></a>
+<a href="#id14"><button class="btn">N</button></a>
+<a href="#id15"><button class="btn">O</button></a>
+<a href="#id16"><button class="btn">P</button></a>
+<a href="#id17"><button class="btn">Q</button></a>
+<a href="#id18"><button class="btn">R</button></a>
+<a href="#id19"><button class="btn">S</button></a>
+<a href="#id20"><button class="btn">T</button></a>
+<a href="#id21"><button class="btn">U</button></a>
+<a href="#id22"><button class="btn">V</button></a>
+<a href="#id23"><button class="btn">W</button></a>
+<a href="#id24"><button class="btn">X</button></a>
+<a href="#id25"><button class="btn">Y</button></a>
+<a href="#id26"><button class="btn">Z</button></a>
+</div>
+<hr>
+
+<div id="id02" class="display" style="width:100%;height:auto;">
+<a href="#id01"><div class="arrow left"></div></a>
+<a href="#id03"><div class="arrow right"></div></a>
+<div class="col-3"><span class="step">B</span></div>
+<div id="ball" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Ball</h1></div>
+</div>
+</div>
+
+<div id="id01" class="display" style="width:100%;height:auto">
+<a href="#id26"><div class="arrow left"></div></a>
+<a href="#id02"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">A</span></div>
+<div id="apple" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Apple</h1></div>
+</div>
+</div>
+
+<div id="id03" class="display" style="width:100%;height:auto">
+<a href="#id02"><div class="arrow left"></div></a>
+<a href="#id04"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">C</span></div>
+<img id="cat" class="col-9">
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Cat</h1></div>
+</div>
+</div>
+
+
+<div id="id04" class="display" style="width:100%;height:auto">
+<a href="#id03"><div class="arrow left"></div></a>
+<a href="#id05"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">D</span></div>
+<img id="dog" class="col-9">
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Dog</h1></div>
+</div>
+</div>
+
+
+<div id="id05" class="display" style="width:100%;height:auto">
+<a href="#id04"><div class="arrow left"></div></a>
+<a href="#id06"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">E</span></div>
+<div id="egg" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Egg</h1></div>
+</div>
+</div>
+
+
+<div id="id06" class="display" style="width:100%;height:auto">
+<a href="#id05"><div class="arrow left"></div></a>
+<a href="#id07"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">F</span></div>
+<div id="fish" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Fish</h1></div>
+</div>
+</div>
+<div id="id07" class="display" style="width:100%;height:auto">
+<a href="#id06"><div class="arrow left"></div></a>
+<a href="#id07"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">G</span></div>
+<div id="ghost" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Ghost</h1></div>
+</div>
+</div>
+
+<div id="id08" class="display" style="width:100%;height:auto">
+<a href="#id07"><div class="arrow left"></div></a>
+<a href="#id09"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">H</span></div>
+<div id="heart" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Heart</h1></div>
+</div>
+</div>
+
+
+<div id="id09" class="display" style="width:100%;height:auto">
+<a href="#id08"><div class="arrow left"></div></a>
+<a href="#id10"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">I</span></div>
+<div id="ice-cream" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Ice-Cream</h1></div>
+</div>
+</div>
+
+
+<div id="id10" class="display" style="width:100%;height:auto">
+<a href="#id09"><div class="arrow left"></div></a>
+<a href="#id11"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">J</span></div>
+<div id="jug" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Jug</h1></div>
+</div>
+</div>
+
+
+<div id="id11" class="display" style="width:100%;height:auto">
+<a href="#id10"><div class="arrow left"></div></a>
+<a href="#id12"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">K</span></div>
+<div id="king" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">King</h1></div>
+</div>
+</div>
+
+
+<div id="id12" class="display" style="width:100%;height:auto">
+<a href="#id11"><div class="arrow left"></div></a>
+<a href="#id13"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">L</span></div>
+<div id="lemon" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Lemon</h1></div>
+</div> 
+</div>
+
+
+<div id="id13" class="display" style="width:100%;height:auto">
+<a href="#id12"><div class="arrow left"></div></a>
+<a href="#id14"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">M</span></div>
+<div id="moon" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Moon</h1></div>
+</div>   
+</div>
+
+
+<div id="id14" class="display" style="width:100%;height:auto">
+<a href="#id13"><div class="arrow left"></div></a>
+<a href="#id15"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">N</span></div>
+<div id="noodles" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Noodles</h1></div>
+</div> 
+</div>
+
+
+<div id="id15" class="display" style="width:100%;height:auto">
+<a href="#id14"><div class="arrow left"></div></a>
+<a href="#id16"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">O</span></div>
+<div id="orange" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Orange</h1></div>
+</div>  
+</div>
+
+
+<div id="id16" class="display" style="width:100%;height:auto">
+<a href="#id15"><div class="arrow left"></div></a>
+<a href="#id17"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">P</span></div>
+<div id="pear" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Pear</h1></div>
+</div>
+</div>
+
+
+<div id="id17" class="display" style="width:100%;height:auto">
+<a href="#id18"><div class="arrow left"></div></a>
+<a href="#id19"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">Q</span></div>
+<div id="quail" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Quail</h1></div>
+</div>
+</div>
+
+
+<div id="id18" class="display" style="width:100%;height:auto">
+<a href="#id17"><div class="arrow left"></div></a>
+<a href="#id19"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">R</span></div>
+<div id="rose" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Rose</h1></div>
+</div>
+</div>
+
+
+<div id="id19" class="display" style="width:100%;height:auto">
+<a href="#id18"><div class="arrow left"></div></a>
+<a href="#id20"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">S</span></div>
+<div id="star-five" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Star</h1></div>
+</div>
+</div>
+
+
+<div id="id20" class="display" style="width:100%;height:auto">
+<a href="#id19"><div class="arrow left"></div></a>
+<a href="#id20"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">T</span></div>
+<div id="tiger" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Tiger</h1></div>
+</div>
+</div>
+
+
+<div id="id21" class="display" style="width:100%;height:auto">
+<a href="#id20"><div class="arrow left"></div></a>
+<a href="#id22"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">U</span></div>
+<div id="umbrella" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Umbrella</h1></div>
+</div>
+</div>
+
+
+<div id="id22" class="display" style="width:100%;height:auto">
+<a href="#id21"><div class="arrow left"></div></a>
+<a href="#id23"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">V</span></div>
+<div id="van" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Van</h1></div>
+</div>
+</div>
+
+
+<div id="id23" class="display" style="width:100%;height:auto">
+<a href="#id22"><div class="arrow left"></div></a>
+<a href="#id24"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">W</span></div>
+<div id="whale" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Whale</h1></div>
+</div>
+</div>
+
+
+<div id="id24" class="display" style="width:100%;height:auto">
+<a href="#id23"><div class="arrow left"></div></a>
+<a href="#id25"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">X</span></div>
+<div id="xylophone" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Xylophone</h1></div>
+</div>
+</div>
+
+
+<div id="id25" class="display" style="width:100%;height:auto">
+<a href="#id24"><div class="arrow left"></div></a>
+<a href="#id26"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">Y</span></div>
+<div id="yoyo" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Yoyo</h1></div>
+</div>
+</div>
+
+
+<div id="id26" class="display" style="width:100%;height:auto">
+<a href="#id25"><div class="arrow left"></div></a>
+<a href="#id01"><div class="arrow right"></div></a>
+<div class="col-5"><span class="step">Z</span></div>
+<div id="zebra" class="col-9"></div>
+<div class="row"></div>
+<div id="info"><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-12"><h1 class="post-title">Zebra</h1></div>
+</div>
+</div>
+
+<script>
+</script>
+</body>
+</html>
